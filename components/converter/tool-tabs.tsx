@@ -5,7 +5,6 @@ import { site } from "@/config/site";
 import { cn } from "@/lib/cn";
 import { ImageToPdfWorkspace } from "@/components/converter/image-to-pdf-workspace";
 import { PdfToImagesWorkspace } from "@/components/converter/pdf-to-images-workspace";
-import { PdfScannerWorkspace } from "@/components/converter/pdf-scanner-workspace";
 import { AdSlot } from "@/components/marketing/ad-slot";
 
 const tools = [
@@ -21,12 +20,7 @@ const tools = [
     description: site.tools.pdfToImages.description,
     panel: <PdfToImagesWorkspace />,
   },
-  {
-    id: site.tools.scanner.id,
-    label: site.tools.scanner.label,
-    description: site.tools.scanner.description,
-    panel: <PdfScannerWorkspace />,
-  },
+
 ] as const;
 
 type ToolId = (typeof tools)[number]["id"];

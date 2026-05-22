@@ -6,6 +6,7 @@ import { site } from "@/config/site";
 import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { AdSlot } from "@/components/marketing/ad-slot";
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -79,6 +80,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} min-h-dvh bg-surface font-sans text-ink antialiased`}
       >
+        <Script
+          async
+          strategy="afterInteractive"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2132103149232575"
+          crossOrigin="anonymous"
+        />
         <ThemeProvider>
           <a
             href="#main-content"

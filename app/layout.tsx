@@ -6,6 +6,7 @@ import { site } from "@/config/site";
 import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { AdSlot } from "@/components/marketing/ad-slot";
+import { Analytics } from "@vercel/analytics/next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -96,6 +97,7 @@ export default function RootLayout({
             </main>
             <SiteFooter />
           </div>
+          <Analytics />
         </ThemeProvider>
       </body>
     </html>
